@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var http = require('http')
 var https = require('https')
+var fs = require('fs')
 
 app.get('/', function(req, res){
     console.log('someone visited the home page!')
