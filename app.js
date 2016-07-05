@@ -4,9 +4,13 @@ var http = require('http')
 var https = require('https')
 var fs = require('fs')
 
+app.use(function(req, res, next){
+    res.header('Strict-Transport-Security', 'max-age=10886400000')
+    next()
+})
+
 app.get('/', function(req, res){
     console.log('someone visited the home page!')
-    res.header('Strict-Transport-Security', 'max-age=10886400000')
     res.send('Welcome to the internet!')
 })
 var httpServer = http.createServer(app)
