@@ -6,7 +6,7 @@ var fs = require('fs')
 
 app.get('/', function(req, res){
     console.log('someone visited the home page!')
-    res.header('Strict-Transport-Security', 'maxAge=10886400000')
+    res.header('Strict-Transport-Security', 'max-age=10886400000')
     res.send('Welcome to the internet!')
 })
 var httpServer = http.createServer(app)
